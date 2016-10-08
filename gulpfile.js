@@ -5,6 +5,7 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const autoprefixer = require('autoprefixer');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -18,12 +19,70 @@ gulp.task('views', () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.css')
+  const
+  assets       = require('postcss-assets'),
+  bem          = require('postcss-bem'),
+  precss       = require('precss'),
+  pxtorem      = require('postcss-pxtorem'),
+  nested       = require('postcss-nested'),
+  at2x         = require('postcss-at2x'),
+  customMedia  = require('postcss-custom-media'),
+  shortSize    = require('postcss-short-size'),
+  triangle     = require('postcss-triangle'),
+  rucksack     = require('rucksack-css'),
+  calc         = require('postcss-calc'),
+  processors   = [
+      precss,
+      calc,
+      assets({
+        loadPaths: ['images/'],
+        basePath: 'app',
+        relative: true,
+        cachebuster: true
+      }),
+      shortSize,
+      bem({
+        style: 'bem',
+        separators: {
+          modifier: '--'
+        },
+        shortcuts: {
+          component: 'b',
+          descendent: 'e',
+          modifier: 'm'
+        }
+      }),
+      rucksack(),
+      nested,
+      triangle,
+      pxtorem({
+        replace: true,
+        propWhiteList: []
+      }),
+      customMedia,
+      at2x,
+      autoprefixer,
+    ]
+  ;
+
+  return gulp.src('app/styles/main.css')
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.sourcemaps.write())
+    .pipe($.postcss(processors))
+    .pipe($.cssnano({discardComments: {removeAll: true}}))
+    .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
+});
+
+gulp.task('lint:css', () => {
+  return gulp.src('app/styles/**/*.css')
+    .pipe($.plumber())
+    .pipe($.stylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
 });
 
 gulp.task('scripts', () => {
@@ -95,7 +154,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['views', 'styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['views', 'styles', 'scripts', 'fonts'], 'lint:css', () => {
     browserSync({
       notify: false,
       port: 9000,
@@ -114,7 +173,7 @@ gulp.task('serve', () => {
     ]).on('change', reload);
 
     gulp.watch('app/**/*.pug', ['views']);
-    gulp.watch('app/styles/**/*.css', ['styles']);
+    gulp.watch('app/styles/**/*.css', ['styles', 'lint:css']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);

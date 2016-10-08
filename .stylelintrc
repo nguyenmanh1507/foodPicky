@@ -1,0 +1,28 @@
+{
+  "extends": "stylelint-config-primer",
+  "plugins": [
+    "stylelint-selector-no-utility"
+  ],
+  "rules": {
+    "string-quotes": "single",
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute", "class"]
+      }
+    ],
+    "selector-class-pattern": [
+      "^(?!(js\\-))[a-z(\\-||__)0-9]+$",
+      {
+        "message": "Selector should be written in lowercase with hyphens (selector-class-pattern)"
+      }
+    ],
+    "max-nesting-depth": 4,
+    "no-unsupported-browser-features": [true, {
+      "browsers": "> 6%, last 2 firefox versions, last 2 chrome versions, last 2 safari versions, last 2 edge versions, ie 11",
+      "severity": "warning",
+      "ignore": ["calc", "flexbox"]
+    }],
+    "primer/selector-no-utility": false
+  }
+}
