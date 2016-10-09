@@ -1,0 +1,24 @@
+@b btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+
+  color: $color-text;
+
+  cursor: pointer;
+  background: $color-border;
+  border: 0;
+  border-radius: 4px;
+
+  @m primary {
+    color: $color-secondary;
+
+    background: $color-primary;
+  }
+
+  @m special {
+    color: $color-primary;
+
+    background: transparent;
+    border: 1px dashed currentColor;
+  }
+}
