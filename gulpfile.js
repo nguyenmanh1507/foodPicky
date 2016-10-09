@@ -18,6 +18,14 @@ gulp.task('views', () => {
     .pipe(reload({stream: true}));
 });
 
+gulp.task('views:pattern', () => {
+  return gulp.src('app/patterns-library/*.pug')
+    .pipe($.plumber())
+    .pipe($.pug({pretty: true}))
+    .pipe(gulp.dest('.tmp/patterns-library'))
+    .pipe(reload({stream: true}));
+});
+
 gulp.task('styles', () => {
   const
   assets       = require('postcss-assets'),
@@ -119,7 +127,7 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['views', 'styles', 'scripts'], () => {
+gulp.task('html', ['views', 'views:pattern', 'styles', 'scripts'], () => {
   return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
@@ -154,7 +162,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['views', 'styles', 'scripts', 'fonts'], 'lint:css', () => {
+  runSequence(['clean', 'wiredep'], ['views', 'views:pattern', 'styles', 'scripts', 'fonts'], 'lint:css', () => {
     browserSync({
       notify: false,
       port: 9000,
@@ -168,11 +176,11 @@ gulp.task('serve', () => {
 
     gulp.watch([
       'app/*.html',
-        'app/images/**/*',
-      '.tmp/fonts/**/*'
+      'app/images/**/*',
+      '.tmp/fonts/**/*',
     ]).on('change', reload);
 
-    gulp.watch('app/**/*.pug', ['views']);
+    gulp.watch('app/**/*.pug', ['views', 'views:pattern']);
     gulp.watch('app/styles/**/*.css', ['styles', 'lint:css']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
@@ -213,7 +221,10 @@ gulp.task('serve:test', ['scripts'], () => {
 gulp.task('wiredep', () => {
   gulp.src('app/layouts/*.pug')
     .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
+      exclude: [
+        '/bower_components/normalize-css',
+      ],
+      ignorePath: /^(\.\.\/)*\.\./,
     }))
     .pipe(gulp.dest('app/layouts'));
 });
