@@ -1,0 +1,63 @@
+/* Table of contents */
+
+/*
+ *  1. Global
+ *  2. Colors
+ *  3. Typography
+ *  4. Space
+ *
+ */
+
+/* 1. Global */
+$base: 14px;
+$type-scale: 1.2;
+$line-height-base: 1.4;
+
+/* 2. Colors */
+$chambray: #3a539b;
+$parsley: #134d13;
+$bright-red: #b50000;
+$pomegranate: #e8500e;
+$white: #fff;
+$mercury: #e6e6e6;
+$whisper: #f4f3f9;
+$cerise-red: #db304c;
+$mirage: #121924;
+$mako: #414551;
+
+$color-primary: $pomegranate;
+$color-secondary: $white;
+$color-info: $chambray;
+$color-success: $parsley;
+$color-warning: $pomegranate;
+$color-danger: $bright-red;
+$color-border: $mercury;
+
+$body-bg: $white;
+$body-color: $mako;
+$link-color: $chambray;
+
+/* 3. Typography */
+$font-sans-serif: "Open Sans", sans-serif;
+$font-serif: "Roboto Slab", serif;
+$font-special: "Sue Ellen Francisco", cursive; /* This is optional, remove if nessesary */
+
+$font-family-body: $font-sans-serif;
+$font-family-heading: $font-serif;
+
+$font-size-h1: calc($base * $type-scale * $type-scale * $type-scale * $type-scale);
+$font-size-h2: calc($base * $type-scale * $type-scale * $type-scale);
+$font-size-h3: calc($base * $type-scale * $type-scale);
+$font-size-h4: calc($base * $type-scale);
+$font-size-h5: $base;
+$font-size-h6: calc($base / $type-scale);
+$font-size-base: $base;
+
+$font-weight-base: 400;
+
+/* 4. Space */
+$space-xs: calc($base / 4);
+$space-sm: calc($base / 2);
+$space-md: $base;
+$space-lg: calc($base * 2);
+$space-xlg: calc($base * 4);
