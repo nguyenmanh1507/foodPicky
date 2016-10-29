@@ -64,8 +64,10 @@ gulp.task('styles', () => {
       nested,
       triangle,
       pxtorem({
+        rootValue: 14,
         replace: true,
-        propWhiteList: []
+        propWhiteList: [],
+        selectorBlackList: [/^html$/],
       }),
       customMedia,
       at2x,
