@@ -1,0 +1,33 @@
+/* Margin right */
+.mrxs {
+  margin-right: $space-xs;
+}
+
+.mrsm {
+  margin-right: $space-sm;
+}
+
+.mrmd {
+  margin-right: $space-md;
+}
+
+/* Margin bottom */
+.mbxs {
+  margin-bottom: $space-xs;
+}
+
+.mbsm {
+  margin-bottom: $space-sm;
+}
+
+.mbmd {
+  margin-bottom: $space-md;
+}
+
+.mblg {
+  margin-bottom: $space-lg;
+}
+
+.mbxlg {
+  margin-bottom: $space-xlg;
+}

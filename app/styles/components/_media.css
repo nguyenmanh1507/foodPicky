@@ -1,16 +1,40 @@
 @b media {
   display: block;
+  padding: $space-md;
+
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
 
   @e section {
     display: table-cell;
     vertical-align: top;
 
     &:first-child {
-      padding-right: $space-sm;
+      padding-right: $space-md;
+    }
+
+    &:last-child {
+      width: 100000px;
     }
 
     .thumbnail {
       max-width: none;
+    }
+  }
+
+  @e meta {
+    display: flex;
+
+    font-size: $font-size-h6;
+  }
+
+  @m 2 {
+    padding: 0;
+
+    border: 0;
+
+    .media__section:first-child {
+      padding-right: $space-sm;
     }
   }
 }
