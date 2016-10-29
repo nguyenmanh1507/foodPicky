@@ -11,6 +11,21 @@
     height: 0;
     padding-bottom: 75%;
 
+    /* Zig zag */
+    @e zz {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      size: 100% 8px;
+
+      background:
+        linear-gradient(135deg, transparent 0%, transparent 50%, $white 50%),
+        linear-gradient(45deg, $white 0%, $white 50%, transparent 50%);
+      background-repeat: repeat-x;
+      background-size: 8px 8px, 8px 8px;
+    }
+
     @e meta {
       position: absolute;
       bottom: 0;
@@ -33,6 +48,10 @@
       top: $space-sm;
       left: $space-md;
     }
+  }
+
+  @e title {
+    color: $body-color;
   }
 
   @e img {
