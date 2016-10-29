@@ -1,0 +1,46 @@
+extends ../layouts/patterns-library
+
+block content
+  .row
+    .small-12.column
+      h1 Cards
+
+  .row
+    - var i = 1
+    while i < 4
+      .medium-4.columns
+        figure.card
+          a.card__thumbnail(href="#")
+            img.card__img(src="http://placehold.it/400x300")
+            .card__thumbnail__meta
+              div
+                i.material-icons star
+                i.material-icons star
+                i.material-icons star
+                i.material-icons star
+                i.material-icons star_border
+              .txt-color-revert.txt-uppercase.txt-small 198 reviews
+
+            .card__thumbnail__addon
+              .sticker 1655 m
+
+          figcaption.card__content
+            h3.card__title The South's best fried chicken
+            p Fried Chicken with cheese #{i++}
+
+            .card__content__meta
+              .txt-large.txt-xbold $ 18,49
+              button.btn.btn--special Order Now
+
+          .card__meta
+            .card__meta__left
+              .media
+                .media__section
+                  img.thumbnail(src="http://placehold.it/50x50")
+                .media__section
+                  .mbxs.txt-bold Chicken restaurant
+                  .txt-muted 68 5th Avenue New York
+
+            button(role="button").card__meta__right
+              i.material-icons favorite_border
+              |  12

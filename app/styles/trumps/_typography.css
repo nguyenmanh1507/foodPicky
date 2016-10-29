@@ -1,0 +1,27 @@
+.txt-color-revert {
+  color: $color-secondary;
+}
+
+.txt-muted {
+  color: color($body-color tint(40%));
+}
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.txt-xbold {
+  font-weight: 800;
+}
+
+.txt-small {
+  font-size: $font-size-h6;
+}
+
+.txt-large {
+  font-size: $font-size-h3;
+}

@@ -12,6 +12,7 @@
 $base: 14px;
 $type-scale: 1.2;
 $line-height-base: 1.4;
+$border-radius: 4px;
 
 /* 2. Colors */
 $chambray: #3a539b;
@@ -24,6 +25,7 @@ $whisper: #f4f3f9;
 $cerise-red: #db304c;
 $mirage: #121924;
 $mako: #414551;
+$cream-can: #f6cf68;
 
 $color-primary: $pomegranate;
 $color-secondary: $white;
@@ -53,7 +55,7 @@ $font-size-h5: $base;
 $font-size-h6: calc($base / $type-scale);
 $font-size-base: $base;
 
-$font-weight-base: 400;
+$font-weight-base: 300;
 
 /* 4. Space */
 $space-xs: calc($base / 4);

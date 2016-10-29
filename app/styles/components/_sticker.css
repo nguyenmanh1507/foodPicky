@@ -1,0 +1,10 @@
+.sticker {
+  display: inline-block;
+  padding: $space-xs;
+
+  font-size: $font-size-h6;
+  color: $color-secondary;
+
+  background: $color-primary;
+  border-radius: $border-radius;
+}

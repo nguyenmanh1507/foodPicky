@@ -1,0 +1,16 @@
+@b media {
+  display: block;
+
+  @e section {
+    display: table-cell;
+    vertical-align: top;
+
+    &:first-child {
+      padding-right: $space-sm;
+    }
+
+    .thumbnail {
+      max-width: none;
+    }
+  }
+}

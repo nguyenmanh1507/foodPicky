@@ -1,0 +1,6 @@
+.thumbnail {
+  display: block;
+
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+}

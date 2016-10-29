@@ -14,13 +14,16 @@ html.no-js(lang="en")
     // endbuild
 
     //- Google Fonts
-    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab:400,700|Sue+Ellen+Francisco", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,800|Roboto+Slab:400,700|Sue+Ellen+Francisco", rel="stylesheet")
+
+    //- Material icon Fonts
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
 
     // build:css styles/main.css
     link(rel="stylesheet", href="../styles/main.css")
     // endbuild
 
-    // build:js scripts/vendor/modernizr.js
+    // build:js scripts/vendor/modernizr.js async
     script(src="/bower_components/modernizr/modernizr.js")
     // endbuild
 
@@ -42,7 +45,6 @@ html.no-js(lang="en")
     // build:js scripts/vendor.js
     // build:js
     script(src="/bower_components/jquery/dist/jquery.js")
-    script(src="/bower_components/modernizr/modernizr.js")
     // endbower
     // endbuild
 
