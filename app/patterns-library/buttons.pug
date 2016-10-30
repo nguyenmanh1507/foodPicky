@@ -1,21 +1,44 @@
 extends ../layouts/patterns-library
 
 block content
-  h1 Buttons
+  .row
+    .small-12.column
+      h1 Buttons
 
-  h3 Default
+      h3 Default
+      .mbmd
+        a.btn(href="#") Cancel
+        input.btn(type="button", value="Cancel")
+        button.btn Cancel
 
-  p
-    a.btn(href="#") Cancel
-    input.btn(type="button", value="Cancel")
-    button.btn Cancel
+      h3 Primary
+      .mbmd
+        button.btn.btn--primary Buy now
 
-  h3 Primary
+      h3 Special
+      .mbmd
+        button.btn.btn--special Order now
 
-  p
-    button.btn.btn--primary Buy now
+      h3 Large button
+      .mbmd
+        button.btn.btn--primary.btn--large Order now
 
-  h3 Special
+      h3 Block button
+      .mbmd
+        button.btn.btn--primary.btn--block View more
 
-  p
-    button.btn.btn--special Order now
+      h3 Info button
+      .mbmd
+        button.btn.btn--info Info
+
+      h3 Success button
+      .mbmd
+        button.btn.btn--success Success
+
+      h3 Warning button
+      .mbmd
+        button.btn.btn--warning Warning
+
+      h3 Danger button
+      .mbmd
+        button.btn.btn--danger Danger

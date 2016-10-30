@@ -14,7 +14,7 @@ html.no-js(lang="en")
     // endbuild
 
     //- Google Fonts
-    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab:400,700|Sue+Ellen+Francisco", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,800|Roboto+Slab:400,700|Sue+Ellen+Francisco", rel="stylesheet")
 
     //- Font Awesome
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
@@ -32,7 +32,75 @@ html.no-js(lang="en")
       p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     <![endif]-->
 
+    header.site-header
+      .row
+        .small-4.columns
+          a(href="#"): img(src="http://placehold.it/110x40")
+        .small-8.columns
+          include ../patterns-library/components/nav
+
     block content
+
+    footer.site-footer
+      .row.mblg
+        .small-12.medium-3.columns
+          a(href="#"): img(src="http://placehold.it/110x40")
+
+        .small-12.medium-3.columns
+          h3.txt-color-revert About Us
+          ul.list-unstyled
+            li.mbsm: a.txt-muted(href="#") About us
+            li.mbsm: a.txt-muted(href="#") History
+            li.mbsm: a.txt-muted(href="#") Our team
+            li.mbsm: a.txt-muted(href="#") We are hiring
+
+        .small-12.medium-3.columns
+          h3.txt-color-revert How It Works
+          ul.list-unstyled
+            li.mbsm: a.txt-muted(href="#") Enter your location
+            li.mbsm: a.txt-muted(href="#") Choose restaurant
+            li.mbsm: a.txt-muted(href="#") Choose meal
+            li.mbsm: a.txt-muted(href="#") Pay via creadit card
+            li.mbsm: a.txt-muted(href="#") Wait for delivery
+
+        .small-12.medium-3.columns
+          h3.txt-color-revert Extra
+          ul.list-unstyled
+            li.mbsm: a.txt-muted(href="#") Q&A
+            li.mbsm: a.txt-muted(href="#") Terms and conditionals
+            li.mbsm: a.txt-muted(href="#") Privacy
+            li.mbsm: a.txt-muted(href="#") Online support
+
+      .row.mblg
+        .small-12.medium-3.columns
+          h3.txt-color-revert Payment Options
+          ul.list-inline.txt-color-revert
+            li: i.fa.fa-money
+            li: i.fa.fa-credit-card-alt
+            li: i.fa.fa-paypal
+
+        .small-12.medium-3.columns
+          h3.txt-color-revert Address
+          p.txt-muted
+            | 4320 Rose Street, Laytonville, California
+          p
+            span.txt-color-revert.mrsm Phone:
+            a(href="tel:707-984-0578") 707-984-0578
+            br
+            span.txt-color-revert.mrsm Email:
+            a(href="mailto:contact@foodpicky.com") contact@foodpicky.com
+
+        .small-12.medium-3.columns
+          h3.txt-color-revert Addition Informations
+          p.txt-muted
+            | Join the thousands of other restaurants who benefit from having their menus on FoodPicky
+
+        .small-12.medium-3.columns
+
+      .row
+        .small-12.column
+          p.txt-muted.txt-center
+            | Copyright &copy; 2016 FoodPicky All Rights Reserved.
 
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

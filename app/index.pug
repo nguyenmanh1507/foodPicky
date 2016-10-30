@@ -1,4 +1,20 @@
 extends layouts/default
 
 block content
-  h1 Hello I'm Nguyen Tien Manh - Frontend Developer
+  .hero
+    .row
+      .small-12.column
+        .hero__content
+          h2.hero__title Order Delivery & Take-out
+          p.hero__description Find restaurant, specials, and coupons for free
+
+          form.form.mblg(action="#")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                .form__group
+                  input.form__control(type="search", placeholder="Rose street, New York")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                button.btn.btn--primary.btn--block(type="submit")
+                  | Find restaurant
+                  |  <i class="fa fa-search"></i>

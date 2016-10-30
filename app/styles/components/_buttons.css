@@ -3,6 +3,7 @@
   padding: 0.8em 2em;
 
   color: $body-color;
+  text-align: center;
 
   cursor: pointer;
   background: $color-border;
@@ -25,6 +26,51 @@
 
       background: color($color-primary shade(30%));
     }
+  }
+
+  @m info {
+    color: $color-secondary;
+    background: $color-info;
+
+    &:hover {
+      background: color($color-info shade(30%));
+    }
+  }
+
+  @m success {
+    color: $color-secondary;
+    background: $color-success;
+
+    &:hover {
+      background: color($color-success shade(30%));
+    }
+  }
+
+  @m warning {
+    color: $color-secondary;
+    background: $color-warning;
+
+    &:hover {
+      background: color($color-warning shade(30%));
+    }
+  }
+
+  @m danger {
+    color: $color-secondary;
+    background: $color-danger;
+
+    &:hover {
+      background: color($color-danger shade(30%));
+    }
+  }
+
+  @m large {
+    padding: 1.2em 3em;
+  }
+
+  @m block {
+    display: block;
+    width: 100%;
   }
 
   @m special {

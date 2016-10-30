@@ -1,0 +1,95 @@
+@b form {
+  @e group {
+    margin-bottom: $space-md;
+
+    @e btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 60px;
+
+      color: $color-primary;
+
+      background: transparent;
+      border: 0;
+      border-left: 1px solid $color-border;
+      border-radius: 0 $border-radius $border-radius 0;
+
+      &:hover {
+        color: $color-secondary;
+
+        background: $color-primary;
+      }
+    }
+
+    @m 2 {
+      position: relative;
+
+      .form__control {
+        padding-right: 70px;
+      }
+    }
+
+    @m 3 {
+      [type="checkbox"],
+      [type="radio"] {
+        display: none;
+      }
+
+      [type="checkbox"]:checked + .fake-checkbox {
+        background: $color-primary;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      [type="radio"]:checked + .fake-radio {
+        background: $color-primary;
+      }
+
+      .fake-checkbox {
+        font-size: 10px;
+        line-height: 13px;
+
+        border-radius: $border-radius;
+
+        @mixin fake-input;
+
+        &::before {
+          font-family: fontAwesome;
+          color: $color-secondary;
+          content: "\f00c";
+
+          opacity: 0;
+        }
+      }
+
+      .fake-radio {
+        border-radius: 50%;
+
+        @mixin fake-input;
+      }
+    }
+  }
+
+  @e control {
+    display: block;
+    width: 100%;
+    padding: $space-sm;
+
+    background-color: $color-secondary;
+    border: 1px solid $color-border;
+    border-radius: $border-radius;
+
+    &.is-error {
+      border-color: $color-danger;
+    }
+  }
+
+  @e error-msg {
+    color: $color-danger;
+  }
+}

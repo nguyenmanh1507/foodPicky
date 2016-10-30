@@ -3,3 +3,8 @@
 @import "cards";
 @import "media";
 @import "sticker";
+@import "forms";
+@import "nav";
+@import "site-header";
+@import "hero";
+@import "site-footer";

@@ -1,0 +1,5 @@
+.site-footer {
+  padding: $space-xlg 0 $space-md;
+
+  background: $mirage;
+}

@@ -10,3 +10,15 @@
     clear: both;
   }
 }
+
+@define-mixin fake-input {
+  display: inline-block;
+  float: left;
+  size: $space-md;
+  margin-top: 2px;
+  margin-right: $space-xs;
+
+  text-align: center;
+
+  border: 1px solid $color-border;
+}

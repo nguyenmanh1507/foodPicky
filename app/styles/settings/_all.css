@@ -5,6 +5,7 @@
  *  2. Colors
  *  3. Typography
  *  4. Space
+ *  5. Media query
  *
  */
 
@@ -37,7 +38,7 @@ $color-border: $mercury;
 
 $body-bg: $white;
 $body-color: $mako;
-$link-color: $chambray;
+$link-color: $pomegranate;
 
 /* 3. Typography */
 $font-sans-serif: "Open Sans", sans-serif;
@@ -63,3 +64,14 @@ $space-sm: calc($base / 2);
 $space-md: $base;
 $space-lg: calc($base * 2);
 $space-xlg: calc($base * 4);
+
+/* 5. Media query */
+$bp-medium: 640px;
+$bp-large: 1024px;
+
+/* Can't use var in custom media
+ * Use px unit instead
+ */
+
+@custom-media --medium-up (min-width: 640px);
+@custom-media --large-up (min-width: 1024px);

@@ -1,0 +1,40 @@
+@b hero {
+  position: relative;
+
+  padding: $space-xlg 0;
+
+  color: $color-secondary;
+  text-align: center;
+
+  background: $mirage resolve("steak.jpg") no-repeat center center;
+  background-size: cover;
+
+  &::before {
+    position: absolute 0;
+
+    content: "";
+
+    background: color($mirage a(60%));
+  }
+
+  @e content {
+    position: relative;
+    z-index: 10;
+  }
+
+  @e title {
+    margin-bottom: $space-sm;
+
+    font-size: $font-size-h2;
+
+    @media (--medium-up) {
+      font-size: calc($base * 3);
+    }
+  }
+
+  @e description {
+    margin-bottom: $space-lg;
+
+    font-weight: 700;
+  }
+}

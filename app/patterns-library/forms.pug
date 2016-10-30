@@ -1,0 +1,86 @@
+extends ../layouts/patterns-library
+
+block content
+  .row
+    .small-12.medium-8.medium-offset-2.column
+      h1 Forms
+
+  .row
+    .small-12.medium-8.medium-offset-2.column
+      form.form(action="/")
+        h3 Input type [text|search|email]
+        .form__group
+          label Your name
+          input.form__control(type="text", placeholder="John Doe")
+
+        h3 Select box
+
+        .form__group
+          label Categories
+          select.form__control
+            option BBQ
+            option Asia
+            option Europe
+            option Traditional
+
+        h3 Textarea
+
+        .form__group
+          label Message
+          textarea.form__control(rows="6")
+
+        h3 Checkbox and Radio
+
+        .mbs Gender
+        .form__group.form__group--3
+          label.mrmd
+            input(type="radio", name="gender", checked)
+            |  Male
+            .fake-radio
+          label.mrmd
+            input(type="radio", name="gender")
+            |  Female
+            .fake-radio
+
+        .mbs Hobbies
+        .form__group.form__group--3
+          label.mrmd
+            input(type="checkbox", name="gender")
+            |  Food
+            .fake-checkbox
+          label.mrmd
+            input(type="checkbox", name="gender")
+            |  Travel
+            .fake-checkbox
+          label.mrmd
+            input(type="checkbox", name="gender")
+            |  Running
+            .fake-checkbox
+
+        h3 Fieldset
+
+        fieldset
+          legend Payment method
+          .form__group
+            label Your name
+            input.form__control(type="text", placeholder="John Doe")
+
+        h3 Error state
+
+        .form__group
+          label Your name
+          input.form__control.is-error(type="text", placeholder="John Doe")
+          span.form__error-msg Wrong input value. Please try again
+
+        .form__group
+          label Categories
+          select.form__control.is-error
+            option BBQ
+            option Asia
+            option Europe
+            option Traditional
+
+        h3 Input with inline button
+        .form__group.form__group--2
+          input.form__control(type="search", placeholder="India food...")
+          button.form__group__btn: i.fa.fa-search

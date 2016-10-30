@@ -1,0 +1,29 @@
+@b nav {
+  @e list {
+    padding: 0;
+    margin: 0;
+
+    text-align: right;
+  }
+
+  @e item {
+    display: inline-block;
+
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: $space-lg;
+    }
+  }
+
+  @e link {
+    font-weight: 700;
+    color: $color-secondary;
+    text-transform: uppercase;
+
+    &.is-active,
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

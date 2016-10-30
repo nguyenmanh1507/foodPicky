@@ -1,0 +1,5 @@
+.site-header {
+  padding: $space-md 0;
+
+  background-color: $mirage;
+}

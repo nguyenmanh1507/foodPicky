@@ -1,0 +1,21 @@
+.list-unstyled {
+  padding: 0;
+
+  li { /* stylelint-disable-line */
+    list-style: none;
+  }
+}
+
+.list-inline {
+  padding: 0;
+
+  li { /* stylelint-disable-line */
+    display: inline-block;
+
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: $space-md;
+    }
+  }
+}

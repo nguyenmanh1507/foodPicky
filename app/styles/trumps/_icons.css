@@ -2,3 +2,8 @@
 .fa-star-o {
   color: $cream-can;
 }
+
+.fa-heart,
+.fa-heart-o {
+  color: $cerise-red;
+}
