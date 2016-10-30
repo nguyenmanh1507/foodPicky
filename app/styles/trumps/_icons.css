@@ -1,3 +1,4 @@
-.material-icons {
-  font-size: inherit;
+.fa-star,
+.fa-star-o {
+  color: $cream-can;
 }
