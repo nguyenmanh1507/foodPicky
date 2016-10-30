@@ -1,5 +1,5 @@
 .site-header {
   padding: $space-md 0;
 
-  background-color: $mirage;
+  background: $mirage resolve("broken_noise.png") at-2x;
 }

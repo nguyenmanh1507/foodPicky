@@ -1,5 +1,5 @@
 .site-footer {
   padding: $space-xlg 0 $space-md;
 
-  background: $mirage;
+  background: $mirage resolve("broken_noise.png") at-2x;
 }
