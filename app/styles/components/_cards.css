@@ -20,10 +20,10 @@
       size: 100% 8px;
 
       background:
-        linear-gradient(135deg, transparent 0%, transparent 50%, $white 50%),
-        linear-gradient(45deg, $white 0%, $white 50%, transparent 50%);
+        linear-gradient(135deg, transparent 0%, transparent 65%, $white 65%),
+        linear-gradient(45deg, $white 0%, $white 35%, transparent 35%);
       background-repeat: repeat-x;
-      background-size: 8px 8px, 8px 8px;
+      background-size: 12px 8px, 12px 8px;
     }
 
     @e meta {
