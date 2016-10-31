@@ -1,0 +1,11 @@
+@b brick {
+  display: inline-block;
+  padding: $space-sm $space-md;
+
+  color: $body-color;
+  text-align: center;
+
+  background: $color-secondary;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+}
