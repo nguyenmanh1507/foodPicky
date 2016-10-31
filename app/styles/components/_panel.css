@@ -1,0 +1,6 @@
+@b panel {
+  padding: $space-md;
+
+  background: $color-secondary;
+  border-bottom: 1px solid $color-border;
+}
