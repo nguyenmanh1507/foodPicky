@@ -2,6 +2,7 @@
   display: block;
   padding: $space-md;
 
+  background: $color-secondary;
   border: 1px solid $color-border;
   border-radius: $border-radius;
 
@@ -20,6 +21,14 @@
     .thumbnail {
       max-width: none;
     }
+  }
+
+  @e title {
+    margin-bottom: $space-xs;
+
+    font-size: $font-size-h4;
+    font-weight: 700;
+    color: $body-color;
   }
 
   @e meta {
