@@ -87,6 +87,11 @@
     &.is-error {
       border-color: $color-danger;
     }
+
+    @m inline {
+      display: inline-block;
+      width: auto;
+    }
   }
 
   @e error-msg {
