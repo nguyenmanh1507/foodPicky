@@ -1,0 +1,37 @@
+extends layouts/default
+
+block content
+  section.hero
+    .row
+      .small-12.column
+        .hero__content
+          h2.hero__title Order Delivery & Take-out
+          p.hero__description Find restaurant, specials, and coupons for free
+
+          form.form.mblg(action="#")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                .form__group
+                  input.form__control(type="search", placeholder="Rose street, New York")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                button.btn.btn--primary.btn--block(type="submit")
+                  | Find restaurant
+                  |  <i class="fa fa-search"></i>
+
+  .panel
+    .row
+      .small-12.column
+        span 124 results
+        select.form__control.form__control--inline.pull-right
+          option Price ($$ - $)
+          option Price ($ - $$)
+          option Popular
+          option Most viewed
+
+  section.well
+    .row.mbmd
+      .small-12
+        h2.txt-center Popular this month in New York
+        p.txt-center
+          | The easiest way to your favourite food
