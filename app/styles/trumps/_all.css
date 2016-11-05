@@ -1,6 +1,6 @@
 @import "typography";
-@import "display";
-@import "images";
-@import "icons";
-@import "lists";
 @import "layout";
+@import "images";
+@import "lists";
+@import "icons";
+@import "display";

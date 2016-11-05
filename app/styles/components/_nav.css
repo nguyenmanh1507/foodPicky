@@ -27,3 +27,25 @@
     }
   }
 }
+
+@b nav-v {
+  padding: 0;
+  margin: 0;
+
+  @e item {
+    list-style: none;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  @e link {
+    display: block;
+    padding: $space-md;
+
+    &:hover {
+      background: $color-border;
+    }
+  }
+}

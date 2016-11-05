@@ -1,0 +1,7 @@
+.tag {
+  display: inline-block;
+  padding: $space-xs $space-md;
+
+  background: $whisper;
+  border-radius: $border-radius;
+}

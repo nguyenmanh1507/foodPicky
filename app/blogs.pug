@@ -1,0 +1,55 @@
+extends layouts/default
+
+block content
+  .panel
+    .row
+      .small-12.column
+        ul.list-inline
+          li: a(href="#") Home
+          li /
+          li: a(href="#") Blog
+          li /
+          li Future of the food delivery logistics
+
+  section.well
+    .row
+      .small-12.medium-8.columns
+        - var i = 1
+        while i <= 4
+          figure.card.mblg
+            a.card__thumbnail.card__thumbnail--2(href="#")
+              img.card__img(src="http://placehold.it/800x450")
+
+              .card__thumbnail__zz
+
+            figcaption.card__content
+              h3: a.card__title(href="#") Future of the food delivery logistics #{i++}
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            .card__meta
+              .card__meta__left
+                .l-flex-1
+                  ul.list-inline
+                    li
+                      i.fa.fa-heart-o
+                      |  26
+                    li
+                      i.fa.fa-clock-o
+                      |  1 hours ago
+                    li
+                      i.fa.fa-comments
+                      |  3
+                  a.btn.btn--special(href="#") Read more
+
+        //- PAGINATE
+        .row
+          .small-12.column
+            ul.list-inline.mblg
+              li: a.brick(href="#") 1
+              li: a.brick(href="#") 2
+              li: a.brick(href="#") 3
+              li: a.brick(href="#") 4
+              li: a.brick(href="#") Next
+
+      .small-12.medium-4.columns
+        include patterns-library/components/sidebar

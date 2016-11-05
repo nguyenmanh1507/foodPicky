@@ -1,0 +1,27 @@
+@b sidebar {
+  background: $color-secondary;
+  border: 1px solid $color-border;
+
+  @e title {
+    padding: $space-md;
+    margin-bottom: 0;
+
+    font-size: $font-size-h3;
+    color: $color-secondary;
+    text-align: center;
+
+    background-color: $color-primary;
+  }
+
+  @e block {
+    padding: $space-md;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+
+    @m 2 {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+aside.sidebar
+  h2.sidebar__title Sidebar
+  .sidebar__block
+    form.form(action="/")
+      .form__group--2
+        input.form__control(type="search", placeholder="India food...")
+        button.form__group__btn: i.fa.fa-search
+
+  .sidebar__block.sidebar__block--2
+    ul.nav-v
+      li.nav-v__item
+        a.nav-v__link(href="#") Asia food
+      li.nav-v__item
+        a.nav-v__link(href="#") Western food
+      li.nav-v__item
+        a.nav-v__link(href="#") Haloween
+      li.nav-v__item
+        a.nav-v__link(href="#") Valentine
+
+  .sidebar__block
+    .l-flex-1.mbmd
+      .txt-bold Popular tags
+      a(href="#"): i.fa.fa-ellipsis-v
+    ul.list-inline
+      li.mbmd: a.tag(href="#") Fish
+      li.mbmd: a.tag(href="#") Beef
+      li.mbmd: a.tag(href="#") Chicken
+      li.mbmd: a.tag(href="#") Grill
+      li.mbmd: a.tag(href="#") Beef
+      li.mbmd: a.tag(href="#") Chicken
+      li.mbmd: a.tag(href="#") Grill
