@@ -1,0 +1,91 @@
+aside.sidebar
+  h2.sidebar__title Advanced Search
+  .sidebar__block
+    form.form(action="/")
+      .form__group--2
+        input.form__control(type="search", placeholder="India food...")
+        button.form__group__btn: i.fa.fa-search
+
+  .sidebar__block
+    .l-flex-1.mbmd
+      .txt-bold Categories
+      a(href="#"): i.fa.fa-ellipsis-v
+    ul.list-unstyled
+      each category in ['Asia food', 'Europe Food', 'Cusine food', 'Fast food']
+        li.form__group.form__group--3
+          label
+            input(type="checkbox", name="categories")
+            =  category
+            .fake-checkbox
+    a(href="#")
+      | More&nbsp;
+      i.fa.fa-angle-down
+
+  .sidebar__block
+    .l-flex-1.mbmd
+      .txt-bold Food for
+      a(href="#"): i.fa.fa-ellipsis-v
+    .form__group--3
+      label.mrmd
+        input(type="radio", name="foodFor", checked)
+        |  Delivery
+        .fake-radio
+      label.mrmd
+        input(type="radio", name="foodFor")
+        |  Take away
+        .fake-radio
+
+  .sidebar__block
+    .l-flex-1.mbmd
+      .txt-bold Tags
+      a(href="#"): i.fa.fa-ellipsis-v
+    ul.list-inline
+      each tag in ['Fish', 'Beef', 'Chicken', 'Pork', 'Spicy food', 'Noodle', 'Sushi']
+        li.mbmd
+          .form__group--3
+            label
+              input(type="checkbox", name="tags")
+              =  tag
+              .fake-checkbox
+
+    a(href="#")
+      | More&nbsp;
+      i.fa.fa-angle-down
+
+  .sidebar__block
+    .l-flex-1.mbmd
+      .txt-bold Price ($ - $$)
+    input.form__control(type="range", min="0", max="100")
+
+  .sidebar__block
+    .l-flex-1.mbmd
+      .txt-bold Rating
+
+    ul.list-unstyled
+      li.form__group.form__group--3
+        label
+          input(type="radio", name="rating", checked)
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star
+          .fake-radio
+      li.form__group.form__group--3
+        label
+          input(type="radio", name="rating")
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star-o
+          .fake-radio
+      li.form__group.form__group--3
+        label
+          input(type="radio", name="rating")
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star
+          i.fa.fa-star-o
+          i.fa.fa-star-o
+          .fake-radio

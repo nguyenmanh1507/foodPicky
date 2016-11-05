@@ -38,7 +38,7 @@
         display: none;
       }
 
-      [type="checkbox"]:checked + .fake-checkbox {
+      [type="checkbox"]:checked ~ .fake-checkbox {
         background: $color-primary;
 
         &::before {
@@ -46,7 +46,7 @@
         }
       }
 
-      [type="radio"]:checked + .fake-radio {
+      [type="radio"]:checked ~ .fake-radio {
         background: $color-primary;
       }
 
