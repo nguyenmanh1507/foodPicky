@@ -48,6 +48,10 @@
       top: $space-sm;
       left: $space-md;
     }
+
+    @m 2 {
+      padding-bottom: 56.25%;
+    }
   }
 
   @e title {
