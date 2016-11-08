@@ -33,6 +33,7 @@
 
   @e meta {
     display: flex;
+    flex-wrap: wrap;
 
     font-size: $font-size-h6;
   }
