@@ -1,0 +1,86 @@
+extends layouts/default
+
+block content
+  section.hero
+    .row
+      .small-12.column
+        .hero__content
+          h2.hero__title Search your favorite food
+          p.hero__description Find restaurant, specials, and coupons for free
+
+          form.form.mblg(action="#")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                .form__group
+                  input.form__control(type="search", placeholder="Rose street, New York")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                button.btn.btn--primary.btn--block(type="submit")
+                  | Find restaurant
+                  |  <i class="fa fa-search"></i>
+
+  .panel
+    .row
+      .small-12.column.l-flex-1
+        span 124 results
+        select.form__control.form__control--inline
+          option Price ($$ - $)
+          option Price ($ - $$)
+          option Popular
+          option Most viewed
+
+  .well
+    .row
+      .small-12.medium-8.medium-push-4.columns
+        .row
+          - var i = 1
+          while i < 7
+            .small-12.large-6.columns
+              figure.card
+                a.card__thumbnail(href="#")
+                  img.card__img(src="http://placehold.it/400x300")
+                  .card__thumbnail__meta
+                    div
+                      i.fa.fa-star
+                      i.fa.fa-star
+                      i.fa.fa-star
+                      i.fa.fa-star
+                      i.fa.fa-star-o
+                    .txt-color-revert.txt-uppercase.txt-small 198 reviews
+
+                  .card__thumbnail__addon
+                    .sticker 1655 m
+                  .card__thumbnail__zz
+
+                figcaption.card__content
+                  h3: a.card__title(href="#") The South's best fried chicken
+                  p Fried Chicken with cheese #{i++}
+
+                  .card__content__meta
+                    .txt-large.txt-xbold $ 18,49
+                    button.btn.btn--special Order Now
+
+                .card__meta
+                  .card__meta__left
+                    .media.media--2
+                      .media__section
+                        img.thumbnail(src="http://placehold.it/50x50")
+                      .media__section
+                        .mbxs.txt-bold Chicken restaurant
+                        .txt-muted 68 5th Avenue New York
+
+                  button(role="button").card__meta__right
+                    i.fa.fa-heart-o
+                    |  12
+
+        .row
+          .small-12.column
+            ul.list-inline
+              li: a.brick(href="#") 1
+              li: a.brick(href="#") 2
+              li: a.brick(href="#") 3
+              li: a.brick(href="#") 4
+              li: a.brick(href="#") Next
+
+      .small-12.medium-4.medium-pull-8.columns
+        include patterns-library/components/sidebar-advanced-search
