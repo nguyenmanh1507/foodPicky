@@ -1,0 +1,69 @@
+extends layouts/default
+
+block content
+  section.hero
+    .row
+      .small-12.column
+        .hero__content
+          h2.hero__title Search your favorite food
+          p.hero__description Find restaurant, specials, and coupons for free
+
+          form.form.mblg(action="#")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                .form__group
+                  input.form__control(type="search", placeholder="Rose street, New York")
+            .row
+              .small-12.medium-6.medium-offset-3.columns
+                button.btn.btn--primary.btn--block(type="submit")
+                  | Find restaurant
+                  |  <i class="fa fa-search"></i>
+
+  .panel
+    .row
+      .small-12.column.l-flex-1
+        span 124 results
+        select.form__control.form__control--inline
+          option Price ($$ - $)
+          option Price ($ - $$)
+          option Popular
+          option Most viewed
+
+  .well
+    .row
+      .small-12.medium-8.medium-push-4.columns
+        .row
+          - var i = 1
+          while i < 7
+            .small-12.columns
+              .media.mbmd
+                .media__section
+                  img.thumbnail(src="http://placehold.it/100x100")
+                .media__section
+                  a.media__title(href="#") Thai Restaurant Hotpot #{i++}
+                  .txt-muted.mbmd Burgers, American, Sandwiches, Fast Food, BBQ
+                  .media__meta
+                    .txt-muted.mrmd
+                      i.fa.fa-check-circle
+                      |  Min $10,00
+                    .txt-muted.mrmd
+                      i.fa.fa-motorcycle
+                      |  30 mins
+                    div
+                      i.fa.fa-star
+                      i.fa.fa-star
+                      i.fa.fa-star
+                      i.fa.fa-star
+                      i.fa.fa-star-o
+                      span.txt-muted  (24)
+        .row
+          .small-12.column
+            ul.list-inline
+              li: a.brick(href="#") 1
+              li: a.brick(href="#") 2
+              li: a.brick(href="#") 3
+              li: a.brick(href="#") 4
+              li: a.brick(href="#") Next
+
+      .small-12.medium-4.medium-pull-8.columns
+        include patterns-library/components/sidebar-advanced-search
