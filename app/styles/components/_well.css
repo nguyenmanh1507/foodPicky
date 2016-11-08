@@ -1,5 +1,5 @@
 @b well {
-  padding: $space-xlg;
+  padding: $space-xlg 0;
 
   background: $color-secondary resolve("cream_dust.png") at-2x;
 }
